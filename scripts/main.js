@@ -9,18 +9,22 @@
    write your logic.
 */
 
-
 function handValue(hand){
   let output = 0;
+  let aceAdded = false;
 
   for (let i = 0;i< hand.length;i++){
     if(hand[i]<10){
       output += parseInt(hand[i]);
     }else if(hand[i] == "J" || hand[i] == "Q" || hand[i] == "K"){
       output += 10;
-    }else if(hand[i] == "A" && output < 11){
+    }else if(hand[i] == "A" && output < 11 && aceAdded === false){
       output += 11;
-    }else{
+      aceAdded = true;
+    }else if(hand[i] == "A" && aceAdded === true){
+      output +=
+    }
+    else{
       output += 1;
     }
   }
