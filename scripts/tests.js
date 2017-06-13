@@ -2,9 +2,10 @@
 
   'use strict';
 
+
   // Assert Function
-  function assert(hand, value) {
-    let output = handValue(hand);
+  function assert(arrHand, value) {
+    let output = handValue(arrHand);
     console.assert(output === value, `Expecting ${output} to be ${value}`);
   }
 
